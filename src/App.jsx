@@ -133,17 +133,8 @@ export default function App() {
         <div className="plan">
           {!allDone && (
             <p className="hint">
-              Want to start a new assignment before finishing this one?{" "}
-              <button
-                className="hint-link"
-                onClick={() =>
-                  document
-                    .getElementById("new-assignment")
-                    .scrollIntoView({ behavior: "smooth", block: "center" })
-                }
-              >
-                Jump to the bottom ↓
-              </button>
+              Want to start a new assignment before finishing this one?.....jump
+              to bottom{" "}
             </p>
           )}
           <div className="bar">
