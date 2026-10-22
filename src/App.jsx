@@ -87,7 +87,7 @@ export default function App() {
       <p className="sub">Paste your assignment. Get a day-by-day plan.</p>
 
       {/* INPUT AREA: shown only when there is no plan yet */}
-      {tasks.length === 0 && !loading && ( (
+      {tasks.length === 0 && !loading && (
         <>
           <textarea
             placeholder="Paste your assignment or project brief here..."
@@ -131,6 +131,21 @@ export default function App() {
       {/* PLAN */}
       {tasks.length > 0 && (
         <div className="plan">
+          {!allDone && (
+            <p className="hint">
+              Want to start a new assignment before finishing this one?{" "}
+              <button
+                className="hint-link"
+                onClick={() =>
+                  document
+                    .getElementById("new-assignment")
+                    .scrollIntoView({ behavior: "smooth", block: "center" })
+                }
+              >
+                Jump to the bottom ↓
+              </button>
+            </p>
+          )}
           <div className="bar">
             <div className="fill" style={{ width: percent + "%" }} />
           </div>
