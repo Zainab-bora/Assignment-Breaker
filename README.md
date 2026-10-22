@@ -47,7 +47,4 @@ assignment-breaker/
 
 ## Team
 
-Built by **Zainab** and **Muzammil** for [hackathon name].
-
-- Zainab: [GitHub link]
-- Muzammil: [GitHub link]
+Built by **Zainab** and **Muzammil** for Hacktober MLH and Cybernauts Uchenab.
