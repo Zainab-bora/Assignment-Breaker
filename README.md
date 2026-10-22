@@ -1,16 +1,53 @@
-# React + Vite
+# 📚 Assignment Breaker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Paste an assignment. Get a day-by-day plan.**
 
-Currently, two official plugins are available:
+Assignment Breaker is a small AI-powered web app that turns an overwhelming assignment brief into a realistic, step-by-step checklist spread across the days left before the deadline.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live demo:** (https://assignment-breaker.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## The Problem
 
-## Expanding the ESLint configuration
+This project was built for my friend Kashaf who studies Pharmacy, a student whovalways starts assignments the night before because they don't know where to begin and how much time to give to each topic of assigment as a whole.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Big assignments feel impossible to start. Assignment Breaker removes that first barrier by splitting the work into small, doable tasks, so the student always knows exactly what to do today.
+
+## Features
+
+- **AI task planner:** paste any assignment brief, pick a deadline, and get tasks grouped day by day, each with an estimated time.
+- **Progress tracker:** tick off tasks as you finish them and watch the progress bar fill up.
+- **Loading animation:** live status messages and a progress bar while the plan is generated.
+- **Start fresh anytime:** a quick option to begin a new assignment, plus a "next assignment" button once everything is done.
+
+## Tech Stack
+
+- **Frontend:** React + Vite
+- **Backend:** Vercel Serverless Function (`/api/plan.js`)
+- **AI:** Google Gemini API, with automatic retry and model fallback when a model is busy
+- **Hosting:** Vercel
+
+The API key is kept on the server, so it is never exposed in the browser.
+
+## Project Structure
+
+```
+assignment-breaker/
+├── api/
+│   └── plan.js        # Serverless function that calls Gemini
+├── src/
+│   ├── App.jsx        # Main UI and logic
+│   ├── App.css        # Styling
+│   └── main.jsx
+├── .env               # API key (not committed)
+├── package.json
+└── README.md
+```
+
+## Team
+
+Built by **Zainab** and **Muzammil** for [hackathon name].
+
+- Zainab: [GitHub link]
+- Muzammil: [GitHub link]
